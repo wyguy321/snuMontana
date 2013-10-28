@@ -1,0 +1,7 @@
+wyatt: 
+	first_name: "Wyatt"
+	last_name: "melin"
+	email: "wyattmelin@yahoo.com"
+	profile_name: "wyguy"
+	password: "password"
+	password_confirmation: "password"

@@ -1,0 +1,2 @@
+module JustsnuitHelper
+end

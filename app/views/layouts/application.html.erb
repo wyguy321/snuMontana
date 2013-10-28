@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sigma Nu Montana</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  
+   
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand"<%= link_to "Sigma Nu Montana", welcome_index_path %></a>
+                  <div class="nav-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav">
+                      <li><%= link_to "Chapter", chapter_index_path %></li>
+                      <li><%= link_to "Why Join Sigma Nu?", justsnuit_index_path %></li>
+                      <li><%= link_to "Alumni", alumni_index_path %></a></li>
+                       <li><%= link_to "Contact Us", about_index_path %></a></li>
+                      
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Search">
+                    </form>
+
+                    <ul class="nav pull-right">
+                      <% if user_signed_in? %> 
+                      <li></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"  <b class="caret"
+                          <%= link_to current_user.full_name, edit_user_registration_path %>
+                        </a></b>
+                        <ul class="dropdown-menu">
+                          <li><%= link_to "Meal Requests", feed_path %></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><%= link_to "Log Out", logout_path %></li>
+                        </ul>
+                        <% else %> 
+                          
+                          <li><%= link_to "Login", login_path %></li>
+
+
+
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div>
+	<div class="container">
+
+    <% flash.each do |type, message| %>
+
+<div class="alert <%= flash_class type %>">
+        <button class="close" data-dismiss="alert">x</button>
+        <%= message %>
+
+    </div>
+
+   
+    <% end %>
+    
+<%= yield %>
+
+
+	</div>
+
+  <br>
+  <br>
+  
+  <div class="container">
+     <div class="row">
+      <h1></h1>
+      <div class="wnDVUtilityBlock wnEven wnEvenLast"><style type="text/css">
+.social-slide {
+  height: 30px;
+  width: 30px;
+  margin: 0px 10px 0px 30px;
+  float: right;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.social-slide:hover {
+  background-position: 0px -30px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8); } 
+  .twitter-hover {
+  background-image: url('http://ktmf.images.worldnow.com/images/2708288_G.png');
+}
+.facebook-hover {
+  background-image: url('http://ktmf.images.worldnow.com/images/2708289_G.png');
+}
+
+
+
+</style>
+
+<div class="span5 offset1">
+<a href="https://twitter.com/SigmaNuGammaPhi" target="_blank"><span class="twitter-hover social-slide"></span></a>
+
+<a href="https://www.facebook.com/pages/Sigma-Nu-Gamma-Phi-Chapter-U-of-M/374382014218?ref=br_tf" target="_blank"> <span class="facebook-hover social-slide"> </span></a>
+<br>
+<br>
+
+ 
+</div>
+<div class="row-fluid">
+   <div class="span12 pagination-centered"><p>© 2013 Sigma Nu Montana.</p></div>
+</div>
+
+<script type="text/javascript">if (window.WNElement) WNElement.setMaxHeight('WNDS76Items', 415);</script>
+
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+</body>
+
+</html>

@@ -18,7 +18,7 @@ module SnuMontana
     config.action_mailer.smtp_settings = {
         :address            => "smtp.gmail.com",
         :port               => 587,
-        :user_name          => 'wyattmelon@gmail.com',
+        :user_name          => '',
         :password           => 'Hyattwyatt321',
         :authentication     => 'plain',
         :enable_starttls_auto => true

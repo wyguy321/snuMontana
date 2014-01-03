@@ -1,17 +1,17 @@
 class UserEmail < ActionMailer::Base
   
+  default from: 'noreply@umtsnu.com'
 
 
-  def contact(sender, subject, message, sent_at = Time.now)
-  	@sender = sender
-  	@message = message
-  	@sent_at = sent_at.strftime("%B %e, %Y at %H:%M")
-  	mail(:subject => subject)
+ def contact(sender, subject, message, sent_at = Time.now)
+  @sender = sender
+  @message = message
+  @sent_at = sent_at.strftime("%B %e, %Y at %H:%M")
+ 
 
+  mail(:subject => subject, :to => "wyattmelon@gmail.com")
 
-
-  end
-
+end
 
 
 end

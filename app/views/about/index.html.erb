@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "about"%>
 <br>
 <br>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
@@ -30,8 +31,13 @@
             <div class="footer">
 <div class="container">
           <h1>Send us an email</h1><br/>
+          <legend></legend>
 <%= form_tag(contact_email_path, :method => 'post') do %>
    
+   
+   
+
+
    <div class="field">
         <%= label_tag "Your email" %>
         <br />

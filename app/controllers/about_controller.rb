@@ -20,7 +20,7 @@ class AboutController < ApplicationController
       redirect_to about_index_path
     else
 
-      flash.now[:error] = "Your message did not send"     
+      flash[:error] = "Your message did not send, please make sure all fields are appropriately filled out." 
 
       redirect_to about_index_path
     end
@@ -30,13 +30,10 @@ class AboutController < ApplicationController
     def validate(sender, subject, message)
       @email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
       if sender.blank? || subject.blank? || message.blank?
-        @error = "Message not sent: Required information not filled"
-        return false
-      elsif subject.length >= 50
-        @error = "Message not sent: Subject must be smaller than 50 characters"
+      
         return false
     elsif sender[@email_regex].nil?
-        @error = "Message not sent: Email not valid"
+       
         return false
       else
         return true

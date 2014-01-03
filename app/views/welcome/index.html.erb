@@ -1,7 +1,11 @@
+<%= stylesheet_link_tag "welcome"%>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<br>
 <body>
 
     <!-- Carousel
     ================================================== -->
+   <div class="container">
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
@@ -61,7 +65,7 @@
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="/home2.jpg">
-        <h2 class="featurette-heading">Oh yeah, Mr. 2000. <span class="muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading">Oh yeah, Mr. 2000. </h2>
         <p class="lead">Just recently, we've activated our 2000 member. It's kind of a big deal. That means 2,000 quality men have been through our house pursing love, truth and honor all over the world. </p>
       </div>
 
@@ -69,19 +73,25 @@
 
       <div class="featurette">
         
-        <h2 class="featurette-heading">An enviorment you'll love?<span class="muted"> Check.</span></h2>
+        <h2 class="featurette-heading">An environment you'll love?<span class="muted"> Check.</span></h2>
+      </div>
+  
+     <div class="blur"><img src="/homepic1.jpg"></div>
+  </div>
+    <div class="whitewrapper">
         <div class="row">
-          <div class="span7 offset5">
-          <img src="/sigma_nu_logo1.gif">
+         <div class="span12 pagination-centered">
+          <img src="/transparanetsnu.png">
         </div>
           <div class="span4 offset3">
-            <img src="/greek_logo.gif">
+            <div class="box2"><img src="/greek_logo.gif"></div>
           </div>
-          <div class="span3"><img src="/UM-Main-Logo-Maroon.gif">
-          </div>
+          <div class="spanny"><img src="/UM-Main-Logo-Maroon.gif">
+    </div>
 
 
         </div>
+      </div>
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
@@ -94,7 +104,12 @@
       </footer>
 
     </div><!-- /.container -->
-
+<script>
+$('.transparanetsnu').mouseover(function(){
+    $('.homepic1').addClass('blur');
+  
+});
+</script>
 
 
     <!-- Le javascript

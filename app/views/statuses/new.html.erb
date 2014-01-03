@@ -1,5 +1,54 @@
-<h1>New status</h1>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+<h1>New Meal Request</h1>
+<div class="span12 pagination-centered">
+    
+<h2>Quantity</h2>
+    <select id="quant" class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+  <input id="mealReq"type="text" class="form-control" placeholder="Meal instructions">
 
-<%= render 'form' %>
 
-<%= link_to 'Back', statuses_path %>
+
+  
+                         <h3> You are seen as: <%= current_user.full_name %>
+                            </h3>
+<button id="registerBtn" type="button" class="btn btn-success">Submit</button>
+
+     
+      
+</div>
+
+          <script type="text/javascript">
+    Parse.initialize("xSE0ouBfBedu29tUuAmSBKAsnzXjgoYRnppLGFP5", "LulyfBbZBUuUdJvtQ4mh104fdVCribYDbXvpvP3D");
+
+    $("#registerBtn").click(function() {
+
+    	var LatePlate = Parse.Object.extend("LatePlates");
+var latePlate = new LatePlate();
+latePlate.set("quant", $("#quant").val());
+latePlate.set("Meal", $("#mealReq").val());
+latePlate.set("User", "<%= current_user.full_name %>");
+
+
+
+ 
+latePlate.save(null, {
+  success: function(latePlate) {
+    // Execute any logic that should take place after the object is saved.
+    alert('Congrats! Meal has been placed in queue');
+  },
+  error: function(latePlate, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and description.
+    alert('Failed to create new object, with error code: ' + error.description);
+  }
+});
+    });
+
+  </script>

@@ -34,30 +34,6 @@ testObject.save({foo: "bar"}, {
   }
 });
 
-    $("#registerBtn").click(function() {
-
-
-
-    	var LatePlate = Parse.Object.extend("LatePlates");
-var latePlate = new LatePlate();
-latePlate.set("quant", $("#quant").val());
-latePlate.set("Meal", $("#mealReq").val());
-latePlate.set("User", "<%= current_user.full_name %>");
-
-
-
- 
-latePlate.save(null, {
-  success: function(latePlate) {
-    // Execute any logic that should take place after the object is saved.
-    alert('Congrats! Meal has been placed in queue');
-  },
-  error: function(latePlate, error) {
-    // Execute any logic that should take place if the save fails.
-    // error is a Parse.Error with an error code and description.
-    alert('Failed to create new object, with error code: ' + error.description);
-  }
-});
-    });
+   
 
   </script>

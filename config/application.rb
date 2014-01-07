@@ -19,7 +19,7 @@ module SnuMontana
         :address            => "smtp.gmail.com",
         :port               => 587,
         :user_name          => 'wyattmelon@gmail.com',
-        :password           => 'Wrigpig321',
+        :password           => 'HackerProof3214',
         :authentication     => 'plain',
         :enable_starttls_auto => true
     }

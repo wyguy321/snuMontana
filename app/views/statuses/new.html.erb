@@ -26,10 +26,7 @@
 
           <script type="text/javascript">
   Parse.initialize("Y2kNEDqQFquUmpDG9uo0zBucYcYIfVr9qaNDxJHZ", "EJyp2ux9Id9DZzvKZORrSKLJJDkMM9CkB7o1wTkV");
-
-    $("#registerBtn").click(function() {
-
-      var TestObject = Parse.Object.extend("TestObject");
+  var TestObject = Parse.Object.extend("TestObject");
 var testObject = new TestObject();
 testObject.save({foo: "bar"}, {
   success: function(object) {
@@ -37,7 +34,30 @@ testObject.save({foo: "bar"}, {
   }
 });
 
+    $("#registerBtn").click(function() {
 
+
+
+    	var LatePlate = Parse.Object.extend("LatePlates");
+var latePlate = new LatePlate();
+latePlate.set("quant", $("#quant").val());
+latePlate.set("Meal", $("#mealReq").val());
+latePlate.set("User", "<%= current_user.full_name %>");
+
+
+
+ 
+latePlate.save(null, {
+  success: function(latePlate) {
+    // Execute any logic that should take place after the object is saved.
+    alert('Congrats! Meal has been placed in queue');
+  },
+  error: function(latePlate, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and description.
+    alert('Failed to create new object, with error code: ' + error.description);
+  }
+});
     });
 
   </script>

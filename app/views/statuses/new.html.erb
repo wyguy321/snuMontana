@@ -29,6 +29,14 @@
 
     $("#registerBtn").click(function() {
 
+      var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}, {
+  success: function(object) {
+    alert("yay! it worked");
+  }
+});
+
     	var LatePlate = Parse.Object.extend("LatePlates");
 var latePlate = new LatePlate();
 latePlate.set("quant", $("#quant").val());

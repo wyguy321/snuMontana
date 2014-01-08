@@ -26,7 +26,14 @@
 
           <script type="text/javascript">
 
-
+    Parse.initialize("tJvXZMsDOeNJeNDxBK7O8XOhfMOHgeUjPxypUpOO", "R5Wk5i3oEMuO1IpJgvdJFHImvKhNiIVWouu7KDsy");
+var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}, {
+  success: function(object) {
+    alert("yay! it worked");
+  }
+});
    
 
   </script>

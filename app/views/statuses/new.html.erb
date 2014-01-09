@@ -10,29 +10,30 @@
   <option>4</option>
   <option>5</option>
 </select>
-  <input id="mealReq"type="text" class="form-control" placeholder="Meal instructions">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+ <input id ="username" /> 
+    <input id ="password" />
 
+    <button id="registerBtn" value="Register">Register</button><button id="signInBtn" value="Sign in">Sign in</button>
 
-
-  
-                         <h3> You are seen as: <%= current_user.full_name %>
-                            </h3>
-<button id="registerBtn" type="button" class="btn btn-success">Submit</button>
-
-     
-      
-</div>
 
           <script type="text/javascript">
+   Parse.initialize("Tt6UWl35MyldwCSH2KpSItDhX3tsJoawa9GLMnVT", "bLu1YrosV3oUVtLztGn6b6aO1yMTxDIqY0mPARJk");
+$("#registerBtn").click(function() {
+        var user = new Parse.User();
+        user.set("username", $("#username").val());
+        user.set("password", $("#password").val());
 
-    Parse.initialize("tJvXZMsDOeNJeNDxBK7O8XOhfMOHgeUjPxypUpOO", "R5Wk5i3oEMuO1IpJgvdJFHImvKhNiIVWouu7KDsy");
-var TestObject = Parse.Object.extend("TestObject");
-var testObject = new TestObject();
-testObject.save({foo: "bar"}, {
-  success: function(object) {
-    alert("yay! it worked");
-  }
-});
-   
+        user.signUp(null, {
+            success: function(user) {
+                alert("Successfully registered!");
+            },
+            error: function(user, error) {
+                alert("Error: " + error.code + " " + error.message);
 
-  </script>
+            }
+        });
+    });
+
+    </script>

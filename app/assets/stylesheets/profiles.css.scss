@@ -11,83 +11,114 @@
 }
 
 }
-@media (min-width: 980px) {
-	body {
-	
-	padding-top: 40px;
-}
 
 
 
 .alert {
 	margin-top: 10px;
 }
+
+#footer-wrapper {
+position: relative;
+float: left;
+padding: 24px 0 0 0;
+height: auto;
+width: 100%;
+text-align: center;
+background-color: #EAC117;
+-webkit-box-shadow: inset rgba(0, 0, 0, 0.35) 0 5px 25px;
+-moz-box-shadow: inset rgba(0, 0, 0, 0.35) 0 5px 25px;
 }
-.social-wrap {
-margin:0px 0px 0px 0px;
-padding:0px 0px 0px 0px;
+.centered {
+	margin:0 auto;
 }
-.social-wrap ul li{
-list-style:none;
-border-bottom:none;
-margin:0px 0px 0px 0px;
-padding:0px 0px 0px 0px;
+.constrain {
+	max-width: 1140px;
 }
-.social-wrap li a {
-margin:5px 5px 0px 5px;
-padding:0px 0px 0px 0px;
-width:60px;
-height:60px;
-float:left;
-text-indent:-99999px;
-background: #191919;
-border:solid 1px #222121;
--moz-border-radius-topleft:5px;
--moz-border-radius-topright:5px;
--moz-border-radius-bottomleft:5px;
--moz-border-radius-bottomright:5px;
--webkit-border-top-left-radius:5px;
--webkit-border-top-right-radius:5px;
--webkit-border-bottom-left-radius:5px;
--webkit-border-bottom-right-radius:5px;
-border-top-left-radius:5px;
-border-top-right-radius:5px;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
+
+.grid {
+	width:100%;
+	margin: 0 auto;
 }
-.social-wrap li a.facebook {
-background: #191919 url(http://4.bp.blogspot.com/-njqMpTvxYbs/UFM2yXm-AnI/AAAAAAAAEFU/yfm_dKxQ2hs/s1600/facebook.png) no-repeat -0px -88px;
--webkit-transition:All 0.3s ease-out;
--moz-transition:All 0.3s ease-out;
--o-transition:All 0.3s ease-out;
+.col-1-5 {
+	width: 29%;
+	list-style:none;
+
+	
 }
-.social-wrap li a.facebook:hover {
-background: #191919 url(http://4.bp.blogspot.com/-njqMpTvxYbs/UFM2yXm-AnI/AAAAAAAAEFU/yfm_dKxQ2hs/s1600/facebook.png) no-repeat -0px -0px;
+[class*=col-] {
+float: left;
+
 }
-.social-wrap li a.twitter {
-background: #191919 url(http://2.bp.blogspot.com/-BtalCDk0UGg/UFM206t5yfI/AAAAAAAAEFk/1cwjqImigQo/s1600/twitter-1.png) no-repeat -0px -88px;
--webkit-transition:All 0.3s ease-out;
--moz-transition:All 0.3s ease-out;
--o-transition:All 0.3s ease-out;
+
+#footnav {
+    display: table;
+    height: 10px;
+    width: 60%;
 }
-.social-wrap li a.twitter:hover {
-background: #191919 url(http://2.bp.blogspot.com/-BtalCDk0UGg/UFM206t5yfI/AAAAAAAAEFk/1cwjqImigQo/s1600/twitter-1.png) no-repeat -0px -0px;
+
+#footnav li {
+    display: table-cell;
+    height: 10px;
+   
+    line-height: 87px;
+   padding-left: 10px;
+   padding-right: 0px;
+    
+    
+    white-space: nowrap;
+}​
+
+
+
+.sub-footer {
+	width: 100%;
+	background-color: #222;
+	padding:10px; 
+	margin-top: 20px; 
 }
-.social-wrap li a.google-p {
-background:#191919 url(http://1.bp.blogspot.com/-qITbsA3n7_w/UFM2z36eMnI/AAAAAAAAEFc/PK9Cmf7JZd4/s1600/google.png) no-repeat -0px -88px;
--webkit-transition:All 0.3s ease-out;
--moz-transition:All 0.3s ease-out;
--o-transition:All 0.3s ease-out;
+
+#footer {
+padding-top: 2px;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+width: 100%;
 }
-.social-wrap li a.google-p:hover {
-background: #191919 url(http://1.bp.blogspot.com/-qITbsA3n7_w/UFM2z36eMnI/AAAAAAAAEFc/PK9Cmf7JZd4/s1600/google.png) no-repeat -0px -0px;
+
+#footer-crown {
+position: absolute;
+top: 0;
+left: 178px; /* optical nudging */
+width: 70px;
+height: 60px;
+background: transparent url(/images/structure/mot-simple-white.png) no-repeat bottom left;
+background-size: 70px 60px;
 }
-.social-wrap li a.rss {
-background:#191919 url(http://1.bp.blogspot.com/-xmXWc6_8mxw/UFM21nVC47I/AAAAAAAAEFs/Ydce5M-vkvw/s1600/twitter.png) no-repeat -0px -88px;
--webkit-transition:All 0.3s ease-out;
--moz-transition:All 0.3s ease-out;
--o-transition:All 0.3s ease-out;
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+#footer-crown {
+background: transparent url(/images/structure/mot-simple-white@2x.png) no-repeat bottom left;
+background-size: 70px 60px;
 }
-.social-wrap li a.rss:hover {
-background: #191919 url(http://1.bp.blogspot.com/-xmXWc6_8mxw/UFM21nVC47I/AAAAAAAAEFs/Ydce5M-vkvw/s1600/twitter.png) no-repeat -0px -0px;
+}
+img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
+
+#footer-crown span {
+display: none;
+}
+
+#footer p {
+margin-left: 250px;
+width: 500px;
+color: white;
+}
+
+#footer a {
+color: #333333;
+text-decoration: underline;
+}
+
+#legal {
+padding-top: 20px;
 }

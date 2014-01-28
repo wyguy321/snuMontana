@@ -9,7 +9,7 @@ class UserEmail < ActionMailer::Base
   @sent_at = sent_at.strftime("%B %e, %Y at %H:%M")
  
 
-  mail(:subject => subject, :to => "wyattmelon@gmail.com")
+  mail(:subject => subject, :to => "president.sigmanu.umt@gmail.com")
 
 end
 

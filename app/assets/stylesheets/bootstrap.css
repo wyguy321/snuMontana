@@ -102,7 +102,7 @@ img {
 
 #map_canvas img,
 .google-maps img {
-  max-width: none;
+  max-width: 80%;
 }
 
 button,

@@ -79,7 +79,13 @@ background-color: #EAC117;
 	padding:10px; 
 	margin-top: 20px; 
 }
+@media (min-width: 633px) {
 
+#footer {
+  margin-right: 180px;
+
+}
+}
 
 #footer {
 padding-top: 2px;
